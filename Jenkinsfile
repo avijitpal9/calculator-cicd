@@ -3,6 +3,7 @@ pipeline {
     agent {
         kubernetes {
         label "jenkins-slave"
+        defaultContainer "python3"
         yaml """
                 kind: Pod
                 metadata:
