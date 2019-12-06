@@ -35,6 +35,7 @@ pipeline {
                 sh ". venv/bin/activate"
                 sh "flake8 --exclude=venv* --statistics"
             }
+        }
 
         stage("Run Test") {
             steps {
