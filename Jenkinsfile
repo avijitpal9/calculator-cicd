@@ -32,14 +32,14 @@ pipeline {
 
         stage("Linting") {
             steps {
-                sh ". venv/bin/activate"
+                // sh ". venv/bin/activate"
                 sh "flake8 --exclude=venv* --statistics"
             }
         }
 
         stage("Run Test") {
             steps {
-                sh ". venv/bin/activate"
+                // sh ". venv/bin/activate"
                 sh "pytest -v --cov=calculator"
             }
         }
