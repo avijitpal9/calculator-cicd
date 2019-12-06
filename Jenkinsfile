@@ -2,7 +2,7 @@ pipeline {
     
     agent {
         kubernetes {
-        label podlabel
+        label "jenkins-slave"
         yaml """
                 kind: Pod
                 metadata:
