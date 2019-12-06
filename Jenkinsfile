@@ -1,7 +1,22 @@
 pipeline {
     
     agent {
-        docker { image 'python3:3.7- alpine' }
+        kubernetes {
+        label podlabel
+        yaml """
+                kind: Pod
+                metadata:
+                  name: jenkins-slave
+                spec:
+                  containers:
+                  - name: python3
+                    image: python:3.7-alpine
+                    imagePullPolicy: Always
+                    command:
+                    - /bin/sh
+                    tty: true
+            """
+   }
     }
 
     stages {
