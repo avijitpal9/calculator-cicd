@@ -1,6 +1,6 @@
 name: Continious Integration
 
-on: [push]
+on: []
 
 jobs:
   build:
