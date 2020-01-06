@@ -21,5 +21,5 @@ steps:
 
 - script: |
     pip install pytest pytest-azurepipelines
-    pytest
+    pytest -v --cov=calculator
   displayName: 'pytest'
